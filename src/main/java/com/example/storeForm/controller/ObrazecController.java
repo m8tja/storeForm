@@ -18,7 +18,7 @@ public class ObrazecController {
     private ObrazecService obrazecService;
 
     @PostMapping("/add")
-    public ResponseEntity<Obrazec> addEmployee(@RequestBody Obrazec obrazec) {
+    public ResponseEntity<Obrazec> addObrazec(@RequestBody Obrazec obrazec) {
         Obrazec newObrazec = obrazecService.addObrazec(obrazec);
         return new ResponseEntity<>(newObrazec, HttpStatus.CREATED);
     }
